@@ -1,0 +1,10 @@
+<%= render "shared/errors", obj: @review %>
+
+<div class="reviews-title">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+</div>
+<div class="reviews-body">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+</div>

@@ -1,0 +1,20 @@
+<div class="top-wrap">
+    <div class="logo">
+        <%= link_to "M.R", :root %>
+    </div>
+    <div class="login">
+        <%= link_to "ログイン", :new_user_session %> or 
+        <%= link_to "新規登録", :new_user_registration %>
+        <% if user_signed_in? %>
+            <%= link_to "ログアウト", :destroy_user_session, method: :delete %>
+        <% end %>
+    </div>
+</div>
+
+<%=
+    if controller.kind_of?(Admin::Base)
+        render "shared/admin_menubar"
+    else
+        render "shared/menubar"
+    end
+%>

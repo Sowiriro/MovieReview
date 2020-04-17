@@ -1,0 +1,9 @@
+<% @page_title= "ユーザーの編集" %>
+<h2><%= @page_title %></h2>
+
+<div class="user-show-control"><%= link_to "ユーザーの詳細に戻る", [:admin, @user] %></div>
+
+<% form_for [:admin, @user] do |form| %>
+    <%= render "form", form: form %>
+    <%= form.submit %>
+<% end %>

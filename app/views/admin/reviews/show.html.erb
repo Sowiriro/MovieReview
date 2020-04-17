@@ -1,0 +1,10 @@
+<div class="review-show">
+    <p><%= link_to @user.name %></p>
+    <img src="<%= "public/movie_image/#{@movie.image_name}" %>">
+    <p class="title"><%= @review.movie.title %></p>
+    <p><%= @review.body %></p>
+    <div class="control">
+        <%= link_to "編集", [:edit, :admin, review] %>
+        <%= link_to "削除", [:admin, review], method: :get, data: {confirm: "本当に削除しますか？"} %>
+    </div>
+</div>

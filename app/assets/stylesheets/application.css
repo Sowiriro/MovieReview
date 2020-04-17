@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+     padding: 0;
+     width: 1200px;
+     margin: 0 auto;
+ }
+
+ .clear {
+     clear: both;
+ }
+
+ a {
+     text-decoration: none;
+     color: rgba(18, 153, 231, 0.295);
+ }
+
+ li {
+     list-style: none;
+ }
+
+ .clear {
+     clear: both;
+ }
+
+ /* ここからがheader-------------------------------------*/
+
+ header {
+     width: 100%;
+     height: 250px;
+ }
+
+ .top-wrap {
+    border: 1px solid rgba(18, 153, 231, 0.295);
+    border-radius: 10px;
+    background-color: black;
+ }
+
+ header .logo {
+     font-size: 30px;
+ }
+
+ header a {
+     color: white;
+ }
+
+ header .login {
+     text-align: right;
+ }
+
+ .menubar {
+     height: 40px;
+     background-color: rgba(49, 53, 61, 0.295);
+     margin: 0;
+ }
+
+ .menubar li {
+     float: left;
+     width: 20%;
+     line-height: 40px;
+ }
+
+/* headerのおしまい-----------------------------------*/
+main {
+    margin: 0 auto;
+}
+
+
+/* サイドバーの始まり------------------------------------------------------------*/
+#sidebar {
+    width: 25%;
+    float: right;
+}
+
+.sidebar-box {
+    border: 1px solid rgba(18, 153, 231, 0.295);
+    height: 150px;
+    border-collapse: collapse;
+    display: flex;
+}
+
+.side-box-left img {
+    width: 80px;
+    height: 100px;
+    float: left;
+    border: 1px solid black;
+    margin: 20px 10px;
+}
+
+.side-box-right {
+    margin: 0;
+}
+
+.side-box-right h4 {
+    font-size: 14px;
+}
+
+.side-box-right p {
+    font-size: 10px;
+}
+
+/*  サイドバーの終わり------------------------------------------------------------*/
+
+main {
+    width: 70%;
+    display: inline-block;
+}
+
+/* footer */
+footer {
+    text-align: center;
+}
+/* footer終了 */

@@ -1,0 +1,12 @@
+<% @page_title = "ユーザー詳細" %>
+<h2><%= @page_title %></h2>
+
+<%= link_to "ユーザー情報の編集", [:edit, :admin, @user] %>
+
+<div class="user-show">
+    <%= @user.user_image %>
+    <%= @user.name %>
+    <%= @user.full_name %>
+    <%= @user.email %>
+    <%= @user.administrator %>
+</div>

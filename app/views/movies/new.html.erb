@@ -1,0 +1,19 @@
+<%= form_for @movie do |form| %>
+<%= render "shared/errors", obj: @movie %>
+
+<div class="movie-container">
+    <div class="movie-title">
+        <p><%= form.label :title %></p>
+        <p><%= form.text_field :title %></p>
+    </div>
+    <div class="movie-body">
+        <p><%= form.label :body %></p>
+        <p><%= form.text_area :body, size: "50x10" %></p>
+    </div>
+    <div class="movie-released_at">
+        <p><%= form.label :released_at %></p>
+        <p><%= form.date_select :released_at, start_year: 1940, end_year: Time.current.year + 1, use_month_numbers: true %></p>
+    </div>
+</div>
+    <p class="movie-submit"><%= form.submit %><p>
+<% end %>

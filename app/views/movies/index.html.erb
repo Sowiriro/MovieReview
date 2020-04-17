@@ -1,0 +1,33 @@
+
+<% if @movies.present? %>
+    <div class="service-box-wrap">
+        <% 5.times do %>
+            <div class="service-box"> 
+                <h4>title</h4>
+                <img src="#"> 
+                <h4><%= link_to "Review", :new_review %></h4>
+            </div>
+        <% end %>
+    </div>
+    <div class="service-box-wrap">
+        <% 5.times do %>
+            <div class="service-box"> 
+                <h4>title</h4>
+                <img src="#">  
+                <h4><%= link_to "Review", :new_review %></h4>
+            </div>
+        <% end %>
+    </div>
+    <div class="service-box-wrap">
+        <% 5.times do %>
+            <div class="service-box"> 
+                <h4>title</h4>
+                <img src="#">  
+                <h4><%= link_to "Review", :new_review %></h4>
+            </div>
+        <% end %>
+    </div>
+    <%= paginate @movies %>
+<% else %>
+    <p>映画の情報がありません</p>
+<% end %>

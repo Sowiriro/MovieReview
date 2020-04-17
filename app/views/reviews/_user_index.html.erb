@@ -1,0 +1,13 @@
+<% if @users_reviews %>
+    <div class="movies-reviews-box">
+        <% @users_reviews.each do |review| %>
+            <p><%= review.user.name %></p>
+            <img src="<%= "movie_image/#{review.movie.image_name}" %>">
+            <p><%= review.movie.title %></p>
+            <p><%= review.body %></p>
+            <%= link_to "もっと読む", :movie %>
+        <% end %>
+    </div>
+<% else %>
+    <p>ユーザーのレビューがありません</p>
+<% end %>

@@ -1,0 +1,29 @@
+ja: 
+  activerecord:
+    models: 
+      user: ユーザー情報
+      movie: 映画情報
+      review: レビュー
+      movie_image: 映画の画像
+    attributes: 
+      user: 
+        user_image: プロフィール画像
+        name: ユーザー名
+        full_name: 氏名
+        email: メールアドレス
+        password: パスワード
+        administrator: 管理者
+      movie: 
+        title: タイトル
+        body: 本文
+        released_at: 公開日
+      review: 
+        title: タイトル
+        body: 本文
+      movie_image:
+        new_data: 画像ファイル
+        alt_text: 代替テキスト
+      errors: 
+        messages: 
+          invalid_member_name: は半角英数字で入力してください
+          invalid_image_type: にはJPEG, PNG, GIF, PNG形式の画像を指定してください。

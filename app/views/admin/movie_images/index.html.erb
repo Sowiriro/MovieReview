@@ -1,0 +1,19 @@
+
+<div class="movie-image-control">
+    <%= link_to "映画詳細に戻る", [:admin, @movie] %>
+    <%= link_to "画像の追加", [:new, :admin, @movie, :image] %>
+</div>
+
+<% if @images.present? %>
+    <h4>画像</h4>
+    <% @images.each do |image| %>
+        <%= image_tag image.data.variant(resize: "100x>") %>
+        <%= image.alt_text %>
+    <% end %>
+    <div class="movie-image-control">
+        <%= link_to "編集", [:edit, :admin, @movie, image] %>
+        <%= link_to "削除", [:admin, @movie, image], method: :delete, data: {confirm: "本当に削除しますか？"}  %>
+    </div>
+<% else %>
+    <p>映画の画像がありません。</p>
+<% end %>

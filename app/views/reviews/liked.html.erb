@@ -1,0 +1,17 @@
+<% @page_title = "いいねしたレビュー" %>
+<h1><%= @page_title %></h1>
+
+<% if @reviews.present? %>
+    <ul>
+        <% @reviews.each do |review| %>
+            <li>
+                <%= link_to review.title, review %>
+                by <%= link_to review.user.name, [review.user, :reviews] %>
+                - <%= link_to "削除", [:unlike, review], method: :patch, data: {confirm: "削除しますか？"} %>
+            </li>
+        <% end %>
+    </ul>
+    <%= paginate @reviews %>
+<% else %>
+    <p>レビューがありません</p>
+<% end %>

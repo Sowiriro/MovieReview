@@ -1,0 +1,20 @@
+
+<div class="movie-detail"><h2>映画の詳細</h2></div>
+<ul class="movie-show-control">
+    <li><%= link_to "編集", :edit_movie %></li>
+    <li><%= link_to "画像", [movie, :images] %></li>
+    <li><%= link_to "削除", :movie, method: :delete, data: {confirm: "本当に削除しますか？"} %></li>
+</ul>
+
+<div class="movie-show">
+    <h2><%= @movie.title %></h2>
+    <div class="movie-edit-image">
+        <img src="<%= "movie_image/#{@movie.image_name}" %>">
+    </div>
+    <p class="body"><%= @movie.body %><p>
+    <div class="clear"></div>
+    <p class="released_at">公開した日:<%= @movie.released_at %></p>
+    <div class="clear"></div>
+</div>
+
+<%= render "reviews/movie_index" %>

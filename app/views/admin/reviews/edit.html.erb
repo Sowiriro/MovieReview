@@ -1,0 +1,6 @@
+<div class="control"><%= link_to "レビュー詳細に戻る", [:admin, @review] %></div>
+
+<%= form_for [:admin, @review] do |form| %>
+    <%= render "form", form: form %>
+    <%= form.submit %>
+<% end %>

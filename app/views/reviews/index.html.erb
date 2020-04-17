@@ -1,0 +1,24 @@
+
+<% if current_user %>
+    <div class="control">
+        <%= link_to "レビューの新規作成", :new_review %>
+        <%= link_to "いいねしたレビュー", :liked_reviews %>
+    </div>
+<% end %>
+
+<% if @reviews.present? %>
+    <% @reviews.each do |review| %>
+        <div class="reviews-box">
+            <p><%= review.user.name %></p>
+            <img src="#"> 
+            <p><%= review.movie.title %></p>
+            <p><%= review.body %></p>
+            <%= link_to "もっと読む", :review %>
+            <% if (count = entry.votes.count) > 0 %>
+                <span class="like">★</span>
+            <% end %>
+        </div>
+    <% end %>
+<% else %>
+    <p>レビューがありません</p>
+<% end %>

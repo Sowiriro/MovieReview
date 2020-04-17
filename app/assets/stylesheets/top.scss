@@ -1,0 +1,50 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* top indexの始まり--------------------------------------*/ 
+.container {
+    width: 100%;
+    float: left;
+}
+
+.top-title {
+    margin-left: 30px;
+    padding: 4px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.service-box-wrap {
+    border: 1px solid rgba(18, 153, 231, 0.295);
+    border-radius: 10px;
+    height: 270px;
+    padding-left: 15px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.service-box {
+    float: left;
+    width: 18%;
+    background-color: rgba(185, 204, 214, 0.295);
+    margin-right: 10px;
+}
+
+.service-box h4 {
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.service-box img {
+    width: 100px;
+    height:150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+
+/* top index の終わり-----------------------------------------*/

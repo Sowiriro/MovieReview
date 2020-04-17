@@ -1,0 +1,38 @@
+<% if current_user.administrator %>
+    <div class="movie-control">
+        <%= link_to "映画を作成", :admin_new_movie %>
+    </div>
+<% end %>
+
+<% if @movies.present? %>
+    <div class="movie-box-wrap">
+        <% 5.times do %>
+            <div class="movie-box"> 
+                <p>title</p>
+                <img src="#"> 
+                <a><%= link_to "Review", :new_review %></a>
+            </div>
+        <% end %>
+    </div>
+    <div class="movie-box-wrap">
+        <% 5.times do %>
+            <div class="movie-box"> 
+                <p>title</p>
+                <img src="#">  
+                <%= link_to "Review", :new_review %>
+            </div>
+        <% end %>
+    </div>
+    <div class="movie-box-wrap">
+        <% 5.times do %>
+            <div class="movie-box"> 
+                <p>title</p>
+                <img src="#">  
+                <%= link_to "Review", :new_review %>
+            </div>
+        <% end %>
+    </div>
+    <%= paginate @movies %>
+<% else %>
+    <p>映画の情報がありません</p>
+<% end %>

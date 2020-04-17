@@ -1,0 +1,14 @@
+<% @page_title = "映画の画像の追加 %>
+<h4><%= @page_title%></h4>
+<h4><%= @movie.title %></h4>
+
+<%= form_for [:admin, @movie, image] do |form| %>
+    <div class="movie-image-box">
+        <%= form.label :new_data %>
+        <%= form.file_field :new_data %>
+    </div>
+    <div class="movie-image-text">
+        <%= form.label :text_alt %>
+        <%= form.text_field :text_alt %>
+    </div>
+<% end %>

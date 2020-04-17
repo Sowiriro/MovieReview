@@ -1,0 +1,7 @@
+<% @page_title= "ユーザーの登録" %>
+<h2><%= @page_title %></h2>
+
+<% form_for [:admin, @user] do |form| %>
+    <%= render "form", form: form %>
+    <%= form.submit %>
+<% end %>
